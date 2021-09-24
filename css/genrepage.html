@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Story Recommender
+</title>
+<link href="static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="static/css/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="js/jquery.min.js"></script>
+
+<link rel="stylesheet" href="static/css/fwslider.css" media="all">
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/fwslider.js"></script>
+<!--end slider -->
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function() {
+                $(".dropdown dd ul").toggle();
+            });
+                        
+            $(".dropdown dd ul li a").click(function() {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+                        
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function(e) {
+                var $clicked = $(e.target);
+                if (! $clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function() {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+     </script>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="menu">
+						  <a class="toggleMenu" href="#"><img src="static/images/nav.png" alt="" /></a>
+						    <ul class="nav" id="nav">
+						    {% if session_user_name %}
+                    	<li>
+                    		<a href="{{url_for('userprofile')}}"> Welcome  &nbsp; {{ session_user_name }}</a>
+                    	</li>
+                	
+                    <li>
+                        <a href="{{url_for('logout')}}">Logout</a>
+                    </li>
+	
+                   {% else %}
+                    <li>
+                        <a href="{{url_for('loginform')}}">Login</a>
+                    </li>
+
+					<li>
+                        <a href="{{url_for('registerform')}}">Sign Up</a>
+                    </li>
+				   {% endif %}
+                    
+                    <li >
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="{{url_for('genre')}}">Genre</a>
+                    </li>
+					
+					<li>
+                        <a href="{{url_for('about')}}">About</a>
+                    </li>
+							<div class="clear"></div>
+							</ul>
+							<script type="text/javascript" src="js/responsive-nav.js"></script>
+				    </div>							
+	    		   
+	    	    </div>
+	           
+	      </div>
+		 </div>
+	    </div>
+	</div>
+	  
+	<div class="features">
+		<div class="container" style="background-color:white">
+			<h3 class="m_3">Categories</h3>
+			  <form action="{{ url_for('display') }}" method="post">
+        
+			<div class="row">
+		
+			 <div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="static/images/mys.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Mystery Stories</h2>
+                        </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#"></a></h4>
+                   <p class="m_5"></p>
+				</div>
+
+			   <div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="static/images/cs.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Classic Stories</h2>
+                         </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#"></a></h4>
+                   <p class="m_5"></p>
+				</div>
+			
+				<div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="static/images/ps.png" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Panchatantra Stories</h2>
+                        </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#"></a></h4>
+                   <p class="m_5"></p>
+				</div>
+			
+			 <div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="static/images/bs.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Buddhist Stories</h2>
+                         </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#"></a></h4>
+                   <p class="m_5"></p>
+				</div>
+				
+						</div>
+			<br><br>
+			<div class="row">
+			
+			 <div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="static/images/bed.png" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Bedtime Stories</h2>
+                        </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#"></a></h4>
+                   <p class="m_5"></p>
+				</div>
+
+			  	
+			  	<div class="col-md-3 top_box">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="static/images/as.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Animal Stories</h2>
+                         </div>
+                    </a> </div>
+                   <h4 class="m_4"><a href="#"></a></h4>
+                   <p class="m_5"></p>
+				</div>
+				<div class="col-md-3 top_box1">
+					<div class="view view-ninth"><a href="single.html">
+                    <img src="static/images/mors.jpg" class="img-responsive" alt=""/>
+                    <div class="mask mask-1"> </div>
+                    <div class="mask mask-2"> </div>
+                      <div class="content">
+                        <h2>Moral Stories</h2>
+                        </div>
+                     </a> </div>
+                   <h4 class="m_4"><a href="#"></a></h4>
+                   <p class="m_5"></p>
+				</div>
+			</div>
+			</form>
+		</div>
+			</div>
+			
+</body>	
+</html>

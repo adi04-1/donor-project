@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>InternetCafe | Events</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="cs/reset.cs" type="text/cs" media="screen">
+<link rel="stylesheet" href="cs/style.cs" type="text/cs" media="screen">
+<link rel="stylesheet" href="cs/grid.cs" type="text/cs" media="screen">
+<script src="js/jquery-1.7.1.min.js"></script>
+<script src="js/cufon-yui.js"></script>
+<script src="js/cufon-replace.js"></script>
+<script src="js/Vegur_500.font.js"></script>
+<script src="js/Ropa_Sans_400.font.js"></script>
+<script src="js/FF-cash.js"></script>
+<script src="js/script.js"></script>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<link rel="stylesheet" href="cs/ie.cs" type="text/cs" media="screen">
+<![endif]-->
+</head>
+<body id="page2">
+<!--==============================header=================================-->
+<header>
+  <div class="border-bot">
+    <div class="main">
+      <h1><a href="index.html">InternetCafe</a></h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="events.html">Events</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="clear"></div>
+    </div>
+  </div>
+</header>
+<!--==============================content================================-->
+<section id="content">
+	 <div id="wc-in-content">
+			<div class="in-left-splits wc-round-crnr">
+						<form id="regform" name="regform" method="post" action="">
+				<h3>DONOR REGISTRATION</h3>
+				
+				<div class="i-form-wrap">
+			  
+					
+						<div class="dnrlabel">
+							<div class="dnrinputlabel">Full Name<span class="red">*</span></div>
+							<input class="dnrinputbox validate[required]" name="fullName" id="fullName">
+						</div>
+						<div class="dnrlabel dnrpad">
+							<div class="dnrlabels">
+								<div class="dnrinputlabel">Age<span class="red">*</span></div>
+								<input class="dnragebox validate[required,custom[integer]]" name="age" id="age">
+							</div>
+							
+						</div>
+						
+						
+						
+						<div class="dnrlabel">
+							<div class="dnrinputlabel">Blood Group<span class="red">*</span></div>
+							<label>
+							<span class="select-donor" id="selectbloodgroup">Select Blood Group</span><select class="styled-donor validate[required]" name="bloodgroup" id="bloodgroup" style="height:32px;">
+								<option value="">Select Blood Group</option>
+								<option value="A+">A+</option>
+								<option value="A-">A-</option>
+							    <option value="B+">B+</option>
+							    <option value="B-">B-</option>
+							    <option value="O+">O+</option>
+							    <option value="O-">O-</option>
+								<option value="AB+">AB+</option>
+								<option value="AB-">AB-</option>
+								<option value="A1+">A1+</option>
+								<option value="A1-">A1-</option>
+								<option value="A2+">A2+</option>
+								<option value="A2-">A2-</option>
+								<option value="A1B+">A1B+</option>
+								<option value="A1B-">A1B-</option>
+								<option value="A2B+">A2B+</option>
+								<option value="A2B-">A2B-</option>
+							</select>
+							</label>
+						</div>
+					   
+					 <div class="dnrlabels" style="position:relative;top:4px;">
+								<div class="dnrinputlabel">Gender<span class="red">*</span></div>
+								<div class="radiohold">  
+									<span class="radio" style="background-position: 0px -50px;"></span><input type="radio" name="part" value="yes" class="styled" checked="checked">
+									<div class="radiolabel">Male</div>
+									<span class="radio"></span><input type="radio" name="part" value="no" class="styled">
+									<div class="radiolabel">Female</div>
+								</div>
+							</div>
+					
+				</div>
+				
+				<div class="i-form-wrap">
+				<h4>Contact Details</h4>
+					
+						<div class="dnrlabel" style="position:relative;">
+							<div class="dnrinputlabel">Mobile Phone<span class="red">*</span></div>
+							<input class="dnrinputbox validate[required,custom[integer]]" name="phone" id="phone">
+							<div class="mob" style="display: none;">
+	
+	<div class="addressformError parentFormcreateaccount formError" style="position:absolute;top: 0px; left: 134px; margin-top: 0px; opacity: 0.87;">
+<div class="formErrorContent">Phone Number already exist<br></div><div class="formErrorArrow"><div class="line10"></div><div class="line9">
+</div><div class="line8"></div><div class="line7"></div><div class="line6"></div><div class="line5"></div>
+<div class="line4"></div><div class="line3"></div><div class="line2"></div><div class="line1"></div></div></div>
+	
+</div>
+						</div>
+						<div class="dnrlabel dnrpad" style="position:relative;">
+							<div class="dnrinputlabel">Email<span class="red">*</span></div>
+							<input class="dnrinputbox validate[required, custom[email]]" name="email" id="email"><br>
+<div class="xxx" style="display: none;">
+	
+	<div class="addressformError parentFormcreateaccount formError" style="position:absolute;top: 0px; left: 135px; margin-top: 0px; opacity: 0.87;">
+<div class="formErrorContent">Email already exist<br></div><div class="formErrorArrow"><div class="line10"></div><div class="line9">
+</div><div class="line8"></div><div class="line7"></div><div class="line6"></div><div class="line5"></div>
+<div class="line4"></div><div class="line3"></div><div class="line2"></div><div class="line1"></div></div></div>
+	
+</div>
+
+
+						</div>
+						<div class="dnrlabel">
+							<div class="dnrinputlabel">Residence Phone</div>
+							<input class="dnrinputbox" name="rphone">
+						</div>
+						<div class="dnrlabel dnrpad">
+							<div class="dnrinputlabel">Office Phone</div>
+							<input class="dnrinputbox" name="ophone">
+						</div>
+					
+				</div>
+				
+				<div class="i-form-wrap">
+				<h4>Location Details</h4>
+					
+						
+						<div class="dnrlabel ">
+							<div class="dnrinputlabel">State<span class="red">*</span></div>
+							<label>
+							<span class="select-donor" id="selectostate">Select State</span><select class="styled-donor validate[required]" name="ostate" id="ostate" style="height:32px;">
+								<option value="">Select State</option>
+								
+									
+									
+								  <option value="1">Andaman Nicobar</option>
+								  
+									
+									
+								  <option value="2">Andhra Pradesh</option>
+								  
+									
+									
+								  <option value="3">Arunachal Pradesh</option>
+								  
+									
+									
+								  <option value="4">Assam</option>
+								  
+									
+									
+								  <option value="5">Bihar</option>
+								  
+									
+									
+								  <option value="6">Chandigarh</option>
+								  
+									
+									
+								  <option value="7">Chhattisgarh</option>
+								  
+									
+									
+								  <option value="8">Dadra &amp; Nagar Haveli </option>
+								  
+									
+									
+								  <option value="9">Daman &amp; Diu</option>
+								  
+									
+									
+								  <option value="10">Delhi</option>
+								  
+									
+									
+								  <option value="11">Goa</option>
+								  
+									
+									
+								  <option value="12">Gujarat</option>
+								  
+									
+									
+								  <option value="13">Haryana</option>
+								  
+									
+									
+								  <option value="14">Himachal Pradesh</option>
+								  
+									
+									
+								  <option value="15">Jammu &amp; Kashmir</option>
+								  
+									
+									
+								  <option value="16">Jharkhand</option>
+								  
+									
+									
+								  <option value="17">Karnataka</option>
+								  
+									
+									
+								  <option value="18">Kerala</option>
+								  
+									
+									
+								  <option value="19">Lakshdweep</option>
+								  
+									
+									
+								  <option value="20">Madhya Pradesh</option>
+								  
+									
+									
+								  <option value="21">Maharashtra</option>
+								  
+									
+									
+								  <option value="22">Manipur</option>
+								  
+									
+									
+								  <option value="23">Meghalaya</option>
+								  
+									
+									
+								  <option value="24">Mizoram</option>
+								  
+									
+									
+								  <option value="25">Nagaland</option>
+								  
+									
+									
+								  <option value="26">Orissa</option>
+								  
+									
+									
+								  <option value="27">Pondicherry</option>
+								  
+									
+									
+								  <option value="28">Punjab</option>
+								  
+									
+									
+								  <option value="29">Rajasthan</option>
+								  
+									
+									
+								  <option value="30">Sikkim</option>
+								  
+									
+									
+								  <option value="31">Tamil Nadu</option>
+								  
+									
+									
+								  <option value="32">Tripura</option>
+								  
+									
+									
+								  <option value="33">Uttar Pradesh</option>
+								  
+									
+									
+								  <option value="34">Uttaranchal</option>
+								  
+									
+									
+								  <option value="35">West Bengal</option>
+								  							</select>
+							</label>
+						</div>
+						
+						<div class="dnrlabel dnrpad">
+							<div class="dnrinputlabel">District<span class="red">*</span></div>
+
+							<div id="loc-div"><span class="select-donor" id="selectodistrict">Select District/Location</span><select class="styled-donor validate[required]" id="odistrict" name="odistrict" style="height:32px;">
+							<option value="">Select District/Location</option>						
+							</select></div>
+
+						</div>
+						
+						<div class="dnrlabel">
+							<div class="dnrinputlabel">Location<span class="red">*</span></div>
+
+							<div id="dis-div"><span class="select-donor" id="selectolocation">Select Location</span><select class="styled-donor validate[required]" id="olocation" name="olocation" style="height:32px;">
+							<option value="">Select Location</option>								
+							</select></div>
+
+						</div>
+					
+				</div>
+				
+				<div class="i-form-wrap no-bg">
+				<h4>Login Details</h4>
+					
+						<div class="dnrlabel" style="position:relative;">
+							<div class="dnrinputlabel">Username<span class="red">*</span></div>
+							<input class="dnrinputbox validate[required]" name="username" id="username">
+							
+							<div class="uuu" style="display: none;">
+	
+	<div class="addressformError parentFormcreateaccount formError" style="position:absolute;top: 0px; left: 132px; margin-top: 0px; opacity: 0.87;">
+<div class="formErrorContent">User already exist<br></div><div class="formErrorArrow"><div class="line10"></div><div class="line9">
+</div><div class="line8"></div><div class="line7"></div><div class="line6"></div><div class="line5"></div>
+<div class="line4"></div><div class="line3"></div><div class="line2"></div><div class="line1"></div></div></div>
+	
+</div>
+						</div>
+						<div class="dnrlabel" style="clear:left;">
+							<div class="dnrinputlabel">Password<span class="red">*</span></div>
+							<input type="password" class="dnrinputbox validate[required,minSize[6]]" name="password" id="password">
+						</div>
+						<div class="dnrlabel dnrpad">
+							<div class="dnrinputlabel">Confirm Password<span class="red">*</span></div>
+							<input type="password" class="dnrinputbox validate[required,equals[password]]" name="cpassword" id="cpassword">
+						</div>
+						
+						<div class="dnrlabel dnrpad" style="clear:left;">
+						
+						<div class="dnrinputlabel">Security Code</div>
+						<img src="./register_files/captcha.php" class="captcha" alt="" style="width:129px;height:29px;">
+						</div>
+						
+						<div class="dnrlabel">
+						<div class="dnrinputlabel">Enter the code<span class="red">*</span></div>
+							<input type="text" name="verify" id="verify" class="dnrinputbox validate[required]">
+						</div>
+						
+						
+						
+						<div class="dnr-confirm">
+						<div class="dnrinputlabel">SMS ALERT</div>
+						<span class="checkbox"></span><input type="checkbox" name="sms_alert" value="yes" class="styled">
+						<label class="checklabel">You will receive an alert on your mobile when there is a request for your blood type within your city.</label>
+						</div>
+						
+						<div class="dnr-confirm">
+						<div class="dnrinputlabel">CALL ALERT</div>
+						<span class="checkbox"></span><input type="checkbox" name="call_alert" value="yes" class="styled">
+						<label class="checklabel">You will receive an Call on your mobile when there is a request for your blood type within your city.</label>
+						</div>
+						
+						<div class="dnr-confirm">
+				<span class="checkbox" style="background-position: 0px -50px;"></span><input type="checkbox" name="agry" value="yes" class="styled" checked="checked">
+				<label class="checklabel">I authorise the website to display my telephone number, e-mail ID and mailing address so that the needy could contact me, as and when there is an emergency.</label>
+						</div>
+						<div class="dnr-confirm">
+							<input type="image" alt="Submit" src="./register_files/btn-submit.jpg" class="btn-submit">
+						</div>
+				</div>
+				</form>
+							</div>
+	</section>
+<!--==============================footer=================================-->
+<footer>
+  <div class="main">
+    <div class="container_12">
+      <div class="wrapper">
+        <div class="grid_3">
+          <div class="spacer-1"> <a href="index.html"><img src="images/footer-logo.png" alt=""></a> </div>
+        </div>
+        <div class="grid_5">
+          <div class="indent-top2">
+            <p class="prev-indent-bot">&copy; 2012 Interior Website Template by <a target="_blank" href="http://www.templatemonster.com/">TemplateMonster.com</a></p>
+            Phone: +1 800 559 6580 Email: <a href="#">info@internetcafe.com</a> </div>
+        </div>
+        <div class="grid_4">
+          <ul class="list-services">
+            <li><a class="item-1" href="#"></a></li>
+            <li><a class="item-2" href="#"></a></li>
+            <li><a class="item-3" href="#"></a></li>
+            <li><a class="item-4" href="#"></a></li>
+          </ul>
+          <span class="footer-text">&copy; 2012 <a class="link color-2" href="#">Privacy Policy</a></span> </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>Cufon.now();</script>
+<div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div></body>
+</html>
